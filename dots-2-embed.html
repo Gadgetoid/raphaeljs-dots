@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rapha&euml;lJS Dots | Pi @ Gadgetoid.com</title>
+		<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<style type="text/css">
+			dl dt {font-weight:bold;}
+		</style>
+	</head>
+	<body>
+		<h1>Rapha&euml;lJS Dots 2.0</h1>
+		<h2>Embed with two lines!</h2>
+
+		<textarea rows="2" cols="80"><script src="http://pi.gadgetoid.com/dots/dots.gadgetoid-2.0.min.js"></script>
+<script type="text/javascript">GadgetoidDots("dots").setup();</script></textarea>
+
+		<script src="http://pi.gadgetoid.com/dots/dots.gadgetoid-2.0.min.js"></script>
+		<script type="text/javascript">GadgetoidDots("dots").setup();</script>
+
+		<h2>Features</h2>
+		<p>Dots has multiple modes of play, from puzzle with custom level support, to elimination or simply endless dot matching.</p>
+		<p>You can now embed multiple instances of Dots into a single page.</p>
+
+		<h2>Function Reference</h2>
+		<dl>
+			<dt>setup</dt>
+			<dd>Called once with no argument, ie: GadgetoidDots("dots").setup(), this sets up a Dots game with your specified settings This should be the last thing you call.</dd>
+			<dt>set_game_size(dots_x,dots_y)</dt>
+			<dd>Set the size of the game in dots. For example .set_game_size(7,7) gives you a 7x7 grid.</dd>
+			<dt>set_allowed_moves(horizontal,vertical,diagonal)</dt>
+			<dd>Called with three boolean arguments, one to enable horizontal moves, one to enable vertical and one for diagonal. ie: GadgetoidDots("dots").set_allowed_moves(true,true,false)</dd>
+			<dt>set_path_col('#FFFFFF')</dt>
+			<dd>Set the colour of the join path</dd>
+			<dt>set_bg_col('#000000')</dt>
+			<dd>Set the background colour of the playing field</dd>
+			<dt>set_dot_cols(['#FF0000','#00FF00'])</dt>
+			<dd>Set the dot colours. Specify an array of colours</dd>
+		</dl>
+	</body>
+</html>

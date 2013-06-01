@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rapha&euml;lJS Dots | Pi @ Gadgetoid.com</title>
+		<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<style type="text/css">
+			dl dt {font-weight:bold;}
+			h1 {font-size:10px;}
+			#dots {width:660px;height:710px;margin:0 auto;}
+		</style>
+	</head>
+	<body>
+		<h1>Rapha&euml;lJS Dots 2.0</h1>
+		<a id="tweet" href="https://twitter.com/share?url=http%3A%2F%2Fpi.gadgetoid.com%2Fdots%2Fdots-2-ipad.html&amp;via=gadgetoid&amp;text=I just scored on RaphaelJS Dots!" class="twitter-share-button">Tweet</a>
+		<script src="http://pi.gadgetoid.com/dots/dots.gadgetoid-2.0.min.js?v=1"></script>
+		<script type="text/javascript">
+			function tweet(score){
+				document.getElementById('tweet').href = 'https://twitter.com/share?url=http%3A%2F%2Fpi.gadgetoid.com%2Fdots%2Fdots-2-ipad.html&via=gadgetoid&text=I just scored ' + score + ' points on RaphaelJS Dots!';
+				document.getElementById('tweet').innerHTML = 'Tweet your score of ' + score;
+			};
+			dots = GadgetoidDots("dots")
+			.set_bg_col('#FFFFFF')
+			.set_game_size(6,6)
+			.set_dot_cols([
+				'#009999',
+				'#FF9933',
+				'#FF3333',
+				'#00CCFF',
+				'#9900CC'
+			])
+			.on_timeout(function(){
+				tweet(dots.get_state().score.total);
+			})
+			.set_dot_size(20,50)
+			.set_text_col('#333333')
+			.setup()
+			.begin();
+		</script>
+	</body>
+</html>
